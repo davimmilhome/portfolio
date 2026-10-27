@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="900" viewBox="0 0 1280 900" role="img" aria-labelledby="title desc">
+  <title id="title">Como o Tempo investido funciona em produção</title>
+  <desc id="desc">Diagrama simplificado com fluxo principal entre navegador, aplicação e banco, além de cache, e-mail e entrega do projeto.</desc>
+  <style>
+    .ui{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#173225}.h1{font-size:30px;font-weight:600}.h2{font-size:20px;font-weight:600}.body{font-size:16px}.small{font-size:13px}.muted{fill:#53695D}.node{fill:#fff;stroke:#D8E5DC;stroke-width:2}.app{fill:#E8F5EC;stroke:#2F7650;stroke-width:2}.data{fill:#EDF5FF;stroke:#3E6E9A;stroke-width:2}.delivery{fill:#FFF7DE;stroke:#93651C;stroke-width:2}.note{fill:#F5F8F6;stroke:#D8E5DC;stroke-width:2}.arrow{stroke:#2F7650;stroke-width:3;fill:none;marker-end:url(#arrow)}.support{stroke:#3E6E9A;stroke-width:3;fill:none;stroke-dasharray:8 8;marker-end:url(#arrowBlue)}.boundary{fill:none;stroke:#B9CFC0;stroke-width:2;stroke-dasharray:10 8}.tag{fill:#fff;stroke:#D8E5DC;stroke-width:1}.chip{fill:#fff;stroke:#D8E5DC;stroke-width:1}.chip-mark{fill:#2F7650}.chip-text{font-size:12px;font-weight:600;fill:#173225}
+  </style>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2F7650"/></marker><marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#3E6E9A"/></marker></defs>
+  <rect width="1280" height="900" fill="#F5F8F6"/>
+  <text x="48" y="62" class="ui h1">Tempo investido · visão simples da infraestrutura</text>
+  <text x="48" y="94" class="ui body muted">O caminho de um registro de tempo, do acesso até a persistência.</text>
+
+  <rect x="36" y="132" width="1208" height="536" rx="16" class="boundary"/>
+  <text x="60" y="166" class="ui small muted" font-weight="600" letter-spacing="1">FLUXO PRINCIPAL E SERVIÇOS DE APOIO</text>
+
+  <rect x="54" y="240" width="220" height="184" rx="12" class="node"/>
+  <text x="84" y="282" class="ui h2">Navegador</text>
+  <text x="84" y="316" class="ui body">Onde a pessoa usa</text>
+  <text x="84" y="342" class="ui body">o timer e consulta</text>
+  <text x="84" y="368" class="ui body">seus resultados.</text>
+  <rect x="84" y="386" width="78" height="24" rx="6" class="chip"/><rect x="94" y="395" width="7" height="7" rx="2" class="chip-mark"/><text x="108" y="402" class="chip-text">HTTPS</text>
+
+  <rect x="374" y="210" width="316" height="244" rx="12" class="app"/>
+  <text x="408" y="254" class="ui h2">Aplicação web</text>
+  <text x="408" y="290" class="ui body">Recebe os pedidos,</text>
+  <text x="408" y="316" class="ui body">valida os dados e aplica</text>
+  <text x="408" y="342" class="ui body">as regras do produto.</text>
+  <rect x="408" y="380" width="92" height="28" rx="6" class="chip"/><image x="418" y="386" width="16" height="16" href="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/python.svg" preserveAspectRatio="xMidYMid meet"/><text x="440" y="399" class="chip-text">Python</text>
+  <rect x="508" y="380" width="96" height="28" rx="6" class="chip"/><image x="518" y="386" width="16" height="16" href="https://cdn.simpleicons.org/django/0C4B33" preserveAspectRatio="xMidYMid meet"/><text x="540" y="399" class="chip-text">Django</text>
+  <rect x="612" y="380" width="78" height="28" rx="6" class="chip"/><image x="622" y="386" width="16" height="16" href="https://cdn.simpleicons.org/render/46E3B7" preserveAspectRatio="xMidYMid meet"/><text x="644" y="399" class="chip-text">Render</text>
+
+  <rect x="790" y="210" width="316" height="244" rx="12" class="data"/>
+  <text x="824" y="254" class="ui h2">Banco de dados</text>
+  <text x="824" y="290" class="ui body">Guarda contas,</text>
+  <text x="824" y="316" class="ui body">atividades e registros</text>
+  <text x="824" y="342" class="ui body">de tempo.</text>
+  <rect x="824" y="380" width="136" height="28" rx="6" class="chip"/><image x="834" y="386" width="16" height="16" href="https://cdn.simpleicons.org/postgresql/4169E1" preserveAspectRatio="xMidYMid meet"/><text x="856" y="399" class="chip-text">PostgreSQL</text>
+  <rect x="968" y="380" width="90" height="28" rx="6" class="chip"/><image x="978" y="386" width="16" height="16" href="https://cdn.simpleicons.org/neon/00E5A8" preserveAspectRatio="xMidYMid meet"/><text x="1000" y="399" class="chip-text">Neon</text>
+
+  <rect x="374" y="530" width="316" height="108" rx="12" class="node"/>
+  <text x="408" y="570" class="ui h2">Cache</text>
+  <text x="408" y="602" class="ui body">Acelera consultas temporárias.</text>
+  <rect x="408" y="608" width="84" height="26" rx="6" class="chip"/><image x="418" y="613" width="16" height="16" href="https://cdn.simpleicons.org/redis/DC382D" preserveAspectRatio="xMidYMid meet"/><text x="440" y="625" class="chip-text">Redis</text>
+  <rect x="790" y="530" width="316" height="108" rx="12" class="node"/>
+  <text x="824" y="570" class="ui h2">E-mail</text>
+  <text x="824" y="602" class="ui body">Ajuda a recuperar contas.</text>
+  <rect x="824" y="608" width="88" height="26" rx="6" class="chip"/><image x="834" y="613" width="16" height="16" href="https://cdn.simpleicons.org/brevo/0B996E" preserveAspectRatio="xMidYMid meet"/><text x="856" y="625" class="chip-text">Brevo</text>
+
+  <path d="M274 332 H364" class="arrow"/>
+  <rect x="290" y="286" width="68" height="26" rx="6" class="tag"/>
+  <text x="324" y="303" text-anchor="middle" class="ui small">acessa</text>
+  <path d="M690 332 H780" class="arrow"/>
+  <rect x="704" y="286" width="72" height="26" rx="6" class="tag"/>
+  <text x="740" y="303" text-anchor="middle" class="ui small">persiste</text>
+
+  <path d="M532 454 V520" class="support"/>
+  <path d="M650 454 C710 474 744 490 776 520" class="support"/>
+
+  <rect x="36" y="690" width="572" height="150" rx="14" class="delivery"/>
+  <text x="68" y="732" class="ui h2">Entrega do projeto</text>
+  <text x="68" y="766" class="ui body">O código passa por testes e é publicado</text>
+  <text x="68" y="792" class="ui body">na aplicação de produção.</text>
+  <rect x="68" y="804" width="150" height="28" rx="6" class="chip"/><image x="78" y="810" width="16" height="16" href="https://cdn.simpleicons.org/githubactions/2088FF" preserveAspectRatio="xMidYMid meet"/><text x="100" y="823" class="chip-text">GitHub Actions</text>
+  <rect x="228" y="804" width="96" height="28" rx="6" class="chip"/><image x="238" y="810" width="16" height="16" href="https://cdn.simpleicons.org/render/46E3B7" preserveAspectRatio="xMidYMid meet"/><text x="260" y="823" class="chip-text">Render</text>
+
+  <rect x="648" y="690" width="596" height="150" rx="14" class="note"/>
+  <text x="680" y="732" class="ui h2">O que fica persistente?</text>
+  <text x="680" y="766" class="ui body">Os dados permanentes ficam no banco.</text>
+  <text x="680" y="792" class="ui body">O servidor pode ser substituído sem perder os registros.</text>
+</svg>

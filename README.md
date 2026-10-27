@@ -69,7 +69,7 @@ No GitHub Pages, há dois formatos principais de publicação:
 - **User site** (`<usuario>.github.io`): o site é servido na raiz do domínio.
   - Exemplo em `_config.yml`: `baseurl: ""`
 - **Project site** (`<usuario>.github.io/<repositorio>`): o site é servido dentro do caminho do repositório.
-  - Exemplo em `_config.yml`: `baseurl: "/porfolio"`
+  - Exemplo em `_config.yml`: `baseurl: "/portfolio"`
 
 Use também `url` com o domínio completo (ex.: `url: "https://davi.github.io"`) para gerar links absolutos corretamente.
 
